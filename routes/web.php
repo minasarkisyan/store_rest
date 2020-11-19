@@ -28,10 +28,7 @@ Route::post('products/{id}/wishlist', [\App\Http\Controllers\ProductWishListCont
 Route::put('products/{id}/image', [\App\Http\Controllers\ProductCoverImageController::class, 'update']);
 
 // ApplePAy, Stripe, PayPall
-Route::post('products/{id}/apple-pay', [\App\Http\Controllers\Pay\ApplePayController::class, 'store']);
-Route::post('products/{id}/pay-pall', [\App\Http\Controllers\Pay\ApplePayController::class, 'store']);
-Route::post('products/{id}/stripe', [\App\Http\Controllers\Pay\ApplePayController::class, 'store']);
-
+Route::post('payments/{id}', [\App\Http\Controllers\ProductPaymentsController::class, 'store']);
 
 
 
