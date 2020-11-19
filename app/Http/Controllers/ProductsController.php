@@ -9,14 +9,6 @@ class ProductsController extends Controller
 {
 
     /**
-     * @return Response
-     */
-    public function create()
-    {
-        return response(['data' => 'This action show form for create product']);
-    }
-
-    /**
      * @param Request $request
      * @return Response
      */

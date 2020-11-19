@@ -18,15 +18,6 @@ class ProductReviewsController extends Controller
     }
 
     /**
-     * @param $id
-     * @return string
-     */
-    public function create(int $id)
-    {
-        return response(['data' => ['message' => 'This action Show the form for creating a new review by product']]);
-    }
-
-    /**
      * @param Request $request
      * @param int $id
      * @return Response

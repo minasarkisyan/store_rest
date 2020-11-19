@@ -5,8 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class LikeReviewController extends Controller
+class LikedReviewsController extends Controller
 {
+
+    public  function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * @param Request $request
      * @param $id
@@ -22,7 +28,7 @@ class LikeReviewController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(int $id)
+    public function destroy(int $id)
     {
         return response (['data' => ['message' => 'This action remove like for review: ' . $id]]);
     }
