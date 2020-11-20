@@ -18,8 +18,8 @@ Route::get('products/{id}/reviews', [\App\Http\Controllers\ProductReviewsControl
 Route::post('products/{id}/reviews', [\App\Http\Controllers\ProductReviewsController::class, 'store']);
 
 // Add/remove like to review
-Route::post('reviews/{id}/likes', [\App\Http\Controllers\LikedReviewsController::class, 'store']);
-Route::delete('reviews/{id}/likes', [\App\Http\Controllers\LikedReviewsController::class, 'destroy']);
+Route::post('likes-reviews', [\App\Http\Controllers\LikedReviewsController::class, 'store']);
+Route::delete('likes-reviews/{id}', [\App\Http\Controllers\LikedReviewsController::class, 'destroy']);
 
 //Add Wishlist
 Route::post('products/{id}/wishlist', [\App\Http\Controllers\ProductWishListController::class, 'store']);
