@@ -6,9 +6,9 @@ namespace App\Services\Payment;
 
 class PaymentFactory
 {
-    private const APPLE_PAY = 'applePay';
-    private const PAY_PALL = 'payPall';
-    private const STRIPE = 'stripe';
+    private const APPLE_PAY = 1;
+    private const PAY_PALL = 2;
+    private const STRIPE = 3;
 
 
     /**

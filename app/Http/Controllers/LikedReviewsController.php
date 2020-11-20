@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+
 
 class LikedReviewsController extends Controller
 {
@@ -15,7 +17,7 @@ class LikedReviewsController extends Controller
 
     /**
      * @param Request $request
-     * @param $id
+     * @param int $id
      * @return Response
      */
     public function store(Request $request, int $id)
@@ -25,10 +27,11 @@ class LikedReviewsController extends Controller
 
 
     /**
-     * @param  int  $id
+     * @param Request $request
+     * @param int $id
      * @return Response
      */
-    public function destroy(int $id)
+    public function destroy(Request $request, int $id)
     {
         return response (['data' => ['message' => 'This action remove like for review: ' . $id]]);
     }
